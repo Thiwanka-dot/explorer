@@ -6,7 +6,7 @@ import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
 
 function NavBar() {
-  const { darkMode, toggleTheme } = useTheme(); // Using ThemeContext
+  const { darkMode, toggleTheme } = useTheme();
   const { user, logout } = useAuth();
 
   return (
