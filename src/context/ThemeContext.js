@@ -9,7 +9,6 @@ export const useTheme = () => useContext(ThemeContext);
 export const ThemeProvider = ({ children }) => {
   const [darkMode, setDarkMode] = useState(false);
 
-  // Define the Material UI theme
   const theme = createTheme({
     palette: {
       mode: darkMode ? 'dark' : 'light',
@@ -20,7 +19,6 @@ export const ThemeProvider = ({ children }) => {
     setDarkMode((prev) => !prev);
   };
 
-  // Set global document background and text color based on darkMode
   useEffect(() => {
     if (darkMode) {
       document.body.style.backgroundColor = '#121212';
