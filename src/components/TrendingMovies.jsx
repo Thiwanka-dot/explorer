@@ -12,7 +12,7 @@ function TrendingMovies() {
         const res = await axios.get(
           `https://api.themoviedb.org/3/trending/movie/week?api_key=401e0db255caec39034482d61909cc33`
         );
-        setTrending(res.data.results); // ✅ This was missing!
+        setTrending(res.data.results);
       } catch (error) {
         console.error('Error fetching trending movies: ', error);
       }
